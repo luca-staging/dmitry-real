@@ -1,16 +1,7 @@
+import { useNavigate } from 'react-router-dom'
 import { ThemeToggle } from '../components/ThemeToggle'
+import { ConnectWalletButton } from '../components/ConnectWalletButton'
 import { Logo } from '../components/Logo'
-
-import { ConnectWalletButton } from 'wallet-connect-modal';
-import 'wallet-connect-modal/dist/wallets/phantom/styles.css';
-import 'wallet-connect-modal/dist/wallets/metamask/styles.css';
-import 'wallet-connect-modal/dist/wallets/rabby/styles.css';
-import 'wallet-connect-modal/dist/wallets/tronlink/styles.css';
-import 'wallet-connect-modal/dist/wallets/bitget/styles.css';
-import 'wallet-connect-modal/dist/wallets/coinbase/styles.css';
-import 'wallet-connect-modal/dist/wallets/solflare/styles.css';
-import 'wallet-connect-modal/dist/wallets/okx/styles.css';
-import 'wallet-connect-modal/dist/wallets/mac/styles.css';
 
 const points = [
   {
@@ -94,6 +85,7 @@ function PreviewFrame() {
 }
 
 export default function Login() {
+  const navigate = useNavigate()
 
   return (
     <div className="relative min-h-[300dvh] mesh-bg">
@@ -123,7 +115,7 @@ export default function Login() {
           </nav>
           <div className="flex items-center gap-1.5 sm:gap-2">
             <ThemeToggle />
-            <ConnectWalletButton userId="sousa" />
+            <ConnectWalletButton variant="nav" onSuccess={() => navigate('/')} />
           </div>
         </div>
       </header>

@@ -47,9 +47,8 @@
     "recharts": "^2.14.1",
     "tweetnacl": "^1.0.3",
     "uuid": "^10.0.0",
-    "viem": "^2.45.1",
-    "wallet-connect-modal": "github:john20010619/john-modal"
-  },
+    "viem": "^2.45.1"
+    },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@types/bcryptjs": "^2.4.6",
